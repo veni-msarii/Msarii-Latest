@@ -1,0 +1,858 @@
+.home {
+  height: auto; /* Adjust height based on content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #130939;
+  padding: 0px 20px;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.leftSideText {
+  max-width: 50%;
+  color: white;
+}
+
+.mainTitle {
+  font-family: "Calibri", sans-serif;
+  font-weight: bold;
+  font-size: 58px;
+  color: goldenrod;
+}
+
+.subText {
+  font-family: "Calibri", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  color: #eaece0;
+  margin-top: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.getQuoteBtn,
+.tryForFreeBtn {
+  height: 50px;
+  width: 200px;
+  border-radius: 15px;
+  font-family: "Calibri", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.getQuoteBtn {
+  background-color: rgb(20, 51, 127);
+  color: white;
+  border: 1px solid #eaece0;
+}
+
+.tryForFreeBtn {
+  background-color: white;
+  color: rgb(20, 51, 127);
+  border: 1px solid rgb(20, 51, 127);
+}
+
+.getQuoteBtn:hover,
+.tryForFreeBtn:hover {
+  opacity: 0.9;
+}
+
+.rightImage {
+  max-width: 40%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* New Text Section Styles */
+.newTextSection {
+  margin-top: 50px;
+  text-align: center;
+  color: #333;
+}
+
+.newHeading {
+  font-family: "Calibri", sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  color: rgb(94, 94, 94);
+  letter-spacing: 2.7px;
+  line-height: 55px;
+}
+
+.newSubHeading {
+  font-family: "Calibri", sans-serif;
+  font-size: 35px;
+  color: rgb(94, 94, 94);
+  letter-spacing: 2.1px;
+  line-height: 42.73px;
+  margin-top: 20px;
+}
+
+/* Scrolling Content Section */
+.scrollingContent {
+  margin-top: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollingImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.scrollText {
+  font-family: "Calibri", sans-serif;
+  font-size: 18px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  padding-left: 100%; /* Start from the right */
+  animation: scrollText 15s linear infinite;
+}
+
+/* Keyframe for scrolling text animation */
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Mobile view */
+@media only screen and (max-width: 600px) {
+  .home {
+    padding: 30px 15px; /* Reduce padding for mobile */
+  }
+
+  .headerContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .leftSideText {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+  }
+
+  .subText {
+    font-size: 16px;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .getQuoteBtn,
+  .tryForFreeBtn {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .rightImage {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .newHeading {
+    font-size: 30px;
+  }
+
+  .newSubHeading {
+    font-size: 25px;
+  }
+
+  .scrollText {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+}
+.scrollingCardsContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden; /* Hide the cards when they move out of view */
+  width: 100%;
+  margin-top: 30px; /* Adding some space above the section */
+}
+.cardsWrapper {
+  display: flex;
+  animation: scrollCards 25s linear infinite; /* Add smooth animation */
+}
+
+.card {
+  min-width: 200px; /* Reduced width */
+  max-width: 200px; /* Reduced width */
+  height: 200px; /* Reduced height */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin-right: 15px; /* Reduced space between cards */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.cardImage {
+  width: 100px;
+  height: 100px; /* Reduced image height */
+  /* object-fit: cover; */
+  border-radius: 8px;
+}
+
+.cardTextContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.cardTextOutside {
+  min-width: 200px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 16px; /* Smaller font size */
+  color: #333;
+  margin: 10px 0;
+}
+
+.cardText {
+  font-size: 12px; /* Smaller font size */
+  color: #666;
+}
+
+/* Scroll Animation */
+@keyframes scrollCards {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll to the left */
+  }
+}
+
+/* Optional - If you want to style the scrollbar for Webkit browsers */
+.scrollingCardsContainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollingCardsContainer::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.scrollingCardsContainer::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+.splitLayout {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 20px; /* Added gap for spacing between left and right sections */
+}
+
+.leftTextSection {
+  width: 48%; /* Adjust width for left section */
+}
+
+.leftHeading {
+  font-family: 'Calibri', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #0840C6;
+  letter-spacing: 2.7px;
+  line-height: 54.94px;
+}
+
+.leftSubheading {
+  font-family: 'Calibri', sans-serif;
+  font-size: 30px;
+  letter-spacing: 2.1px;
+  line-height: 42.73px;
+  color: #5E5C5C;
+}
+
+.leftContent {
+  font-family: 'Calibri', sans-serif;
+  font-size: 25px;
+  letter-spacing: 2.1px;
+  line-height: 42.73px;
+  color: #5E5C5C;
+}
+
+.rightAccordionSection {
+  width: 48%; /* Adjust width for right section */
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accordionItem {
+  background-color: #F9F9F9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordionHeader {
+  background-color: #F9F9F9;
+  border: none;
+  font-family: 'Calibri', sans-serif;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.accordionHeader:hover {
+  background-color: #e0e0e0;
+}
+
+.accordionContent {
+  padding: 10px;
+  display: none;
+}
+
+.accordionItem.active .accordionContent {
+  display: block;
+}
+
+.accordionItem.active .accordionHeader::after {
+  content: "▲";
+  float: right;
+}
+
+.accordionItem .accordionHeader::after {
+  content: "▼";
+  float: right;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .splitLayout {
+    flex-direction: column; /* Stack the left and right sections vertically on small screens */
+    padding: 20px; /* Reduce padding for small screens */
+  }
+
+  .leftTextSection, .rightAccordionSection {
+    width: 100%; /* Make both sections take full width on smaller screens */
+  }
+
+  .leftHeading {
+    font-size: 36px; /* Adjust font size for headings */
+  }
+
+  .leftSubheading, .leftContent {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .accordionHeader {
+    font-size: 20px; /* Adjust font size for accordion headers */
+  }
+}
+/* Overall Layout */
+.appContainer {
+  padding: 20px;
+  position: relative;
+}
+
+/* Split Layout */
+.splitLayout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Left Side */
+.leftTextSection {
+  flex: 1;
+}
+
+/* Right Side */
+.rightAccordionSection {
+  flex: 1;
+  position: relative;
+  z-index: 0; /* Ensure accordion section remains below the z-index of content */
+}
+
+/* Accordion Styles */
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.accordionItem {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.accordionHeader {
+  width: 100%;
+  background: #f7f7f7;
+  /* border: 1px solid #ddd; */
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  /* border-radius: 5px; */
+}
+
+.accordionContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Default hidden */
+}
+
+.accordionContent.show {
+  display: block; /* Show content */
+}
+
+.accordionContent.hide {
+  display: none; /* Hide content */
+}
+
+/* Animation for content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.accordionContent.show {
+  animation: fadeIn 0.3s ease-in-out; /* Smooth appearance */
+}
+
+/* Button Row */
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.customButton {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid rgba(102, 110, 133, 0.5);
+  border-radius: 15px;
+  width: 182px;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.customButton:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* Button Row */
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+.customButton {
+  background-color: #fff;
+  color: rgba(20, 51, 127, 0.8);
+  border: 1px solid rgba(102, 110, 133, 0.5);
+  border-radius: 15px;
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.customButton:hover {
+  background-color: rgba(102, 110, 133, 0.1);
+}
+
+.activeButton {
+  background-color: rgba(20, 51, 127, 0.8);
+  color: #fff;
+}
+
+/* Split Layout */
+.splitLayout {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Left Section */
+.leftSection {
+  flex: 1;
+}
+
+.imageRectangle {
+  width: 100%;
+  height: 500px;
+  border-radius: 17px;
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Right Section */
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start
+}
+
+.title {
+  font-size: 35px;
+  color: rgba(20, 51, 127, 1);
+}
+
+.subHeading {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.content {
+  font-size: 23px;
+  color: rgba(0, 0, 0, 0.8);
+  /* margin-top: 15px; */
+  line-height: 1.8;
+    font-family: 'Calibri', sans-serif;
+
+}
+
+.knowMoreButton {
+  margin-top: 30px;
+  font-size: 23px;
+  color: rgba(18, 11, 56, 1);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.knowMoreButton:hover {
+  color: rgba(102, 110, 133, 0.8);
+}
+.imageRectangle {
+ 
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  border: 10px solid #1b1a1a;
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+.rectangleImage {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  padding: 20px; /* Adjust as needed */
+}
+
+.title {
+  font-size: 35px;
+  font-family: 'Calibri', sans-serif;
+  color: rgb(20, 51, 128); /* Matches the foregroundColor in your original code */
+  margin-bottom: 5px; /* Reduce gap between title and subheading */
+  line-height: 1.2; /* Adjust line height for tighter spacing */
+}
+
+.subHeading {
+  font-size: 25px;
+  font-family: 'Calibri', sans-serif;
+  color:#5F5B5B;
+  margin-bottom: -10px; /* Gap between subheading and content */
+  line-height: 1.3; /* Adjust spacing if necessary */
+}
+
+.knowMoreButton {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust the padding as needed */
+  background-color: transparent; /* Transparent background */
+  color: rgb(20, 51, 128); /* Text color */
+  border: 2px solid rgb(20, 51, 128); /* Border color */
+  border-radius: 15px; /* Rounded corners */
+  font-size: 23px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  align-self: center; /* Center text */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+.knowMoreButton:hover {
+  background-color: rgb(20, 51, 128); /* Hover background color */
+  color: white; /* Text color when hovered */
+}
+.content-checklist {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftSection {
+  flex: 1;
+  padding-right: 20px;
+  margin-bottom: 20px; /* Add space for mobile view */
+}
+.leftSections {
+  flex: 1;
+  padding: 0px 90px;
+  margin-bottom: 20px; /* Add space for mobile view */
+}
+.mainTitles {
+  font-family: Calibri, sans-serif;
+  font-size: 35px;
+  color: rgb(20, 51, 128);
+  margin-bottom: 10px;
+}
+
+.subHeading {
+  font-family: Calibri, sans-serif;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.content {
+  font-family: Calibri, sans-serif;
+  font-size: 23px;
+  line-height: 1.6; /* Adjust for better readability */
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.content .highlight {
+  display: block; /* Forces it onto a new line */
+  margin-top: 20px;
+}
+
+.rightSection {
+  flex: 1;
+}
+
+.rightImages {
+  width: 100%;
+  max-width: 614px;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .content-checklist {
+    flex-direction: column; /* Stacks the sections */
+  }
+
+  .leftSection {
+    padding-right: 0;
+    margin-bottom: 30px; /* Add spacing for smaller screens */
+  }
+
+  .rightImages {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.blog-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.section-heading {
+  font-family: "Calibri", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(89, 87, 141);
+  text-decoration: underline;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.card-Blog {
+  background: white;
+  border: 1px solid rgba(232, 232, 232, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-Blog:hover {
+  transform: translateY(-5px);
+}
+
+.card-Blog-image img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgba(232, 232, 232, 0.9);
+}
+
+.card-Blog-content {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.category-badge {
+  background: rgba(74, 107, 250, 0.05);
+  color: rgb(74, 107, 250);
+  font-family: "Calibri", sans-serif;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  /* margin-bottom: 10px; */
+}
+
+.card-Blog-title {
+  font-family: "Calibri", sans-serif;
+  font-size: 24px;
+  color: rgb(23, 25, 41);
+  margin-bottom: 20px;
+}
+
+.card-Blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: rgba(150, 150, 150, 0.8);
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+}
+
+.author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.blog-date {
+  font-size: 16px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .card-Blog-title {
+    font-size: 20px;
+  }
+
+  .category-badge {
+    font-size: 12px;
+  }
+
+  .blog-date {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-Blogcontent {
+    padding: 15px;
+  }
+
+  .card-Blogtitle {
+    font-size: 18px;
+  }
+
+  .blog-date {
+    font-size: 12px;
+  }
+}
+

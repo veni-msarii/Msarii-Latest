@@ -1,0 +1,404 @@
+.about-page {
+    padding: 40px;
+  }
+  
+  .sections {
+    display: flex;
+    justify-content: space-evenly; /* Space out the sections horizontally */
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .circle-image {
+    width: 75%;  /* Adjust width to fit inside the circle */
+    height: 75%;  /* Adjust height to fit inside the circle */
+  }
+  
+  .circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* Space between the circle containers */
+  }
+  
+  .circle {
+    width: 190px;
+    height: 190px;
+    background-color: rgba(0.08, 0.20, 0.50, 0.03);  /* Light blue shade */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0.08, 0.20, 0.50, 0.25);
+  }
+  
+  .circle-number {
+    font-family: 'Calibri', sans-serif;
+    font-size: 80px;
+    color: rgb(18, 11, 56);  /* Dark color for the number */
+    letter-spacing: 4.8px;
+    line-height: 97.67px;
+  }
+  
+  .description {
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 30px;
+    color: rgba(63, 63, 63, 0.85); /* Dark gray */
+    line-height: 41.39px;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  .spacer {
+    width: 100%;
+    height: 20px; /* Spacer height */
+  }
+  
+  @media (max-width: 768px) {
+    .sections {
+      flex-direction: row;  /* Ensure sections remain in a row even on smaller screens */
+      align-items: center;  /* Center items horizontally */
+      flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+
+    }
+  
+    .circle-container {
+      margin-bottom: 30px; /* Add more space between each circle-container on small screens */
+    }
+  
+    .circle {
+      width: 150px;   /* Reduce size of circles for smaller screens */
+      height: 150px;  /* Ensure circles are still proportional */
+    }
+  
+    .circle-number {
+      font-size: 60px; /* Reduce number size */
+      line-height: 72px; /* Adjust line height for smaller numbers */
+    }
+  
+    .description {
+      font-size: 24px;  /* Adjust description size for smaller screens */
+      line-height: 32px; /* Adjust line height */
+    }
+  }
+  
+  .team-section {
+    display: flex;
+    justify-content: center;
+    /* padding: 20px 0; */
+    background-color: white;  /* Light background for the section */
+  }
+  
+  .rectangle {
+    width: 1440px;
+    height: 269px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;  /* Optional: Adds rounded corners */
+  }
+  .line-break {
+    display: block; /* Forces a break before "by injected humour" */
+  }
+  
+  .section-title {
+    font-family: 'Calibri', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 26px;
+    color: rgb(214, 112, 20);  /* Your specified color */
+    margin-bottom: 10px;
+  }
+  
+  .main-title {
+    font-family: 'Calibri', sans-serif;
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 62px;
+    color: rgb(18, 10, 56);  /* Your specified dark color */
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-family: 'Calibri', sans-serif;
+    font-size: 28px;
+    line-height: 35px;
+    color: rgb(18, 10, 56);  /* Your specified dark color */
+    margin-top: 10px;
+  }
+  
+  .team-section {
+    text-align: center; /* Center aligns the text */
+    padding: 20px;
+  }
+  
+  .team-heading {
+    font-family: 'Calibri', sans-serif; /* Use Calibri font */
+    font-size: 26px; /* Font size */
+    font-weight: bold; /* Bold font */
+    line-height: 26px; /* Line spacing */
+    color: rgb(214, 112, 20); /* Converted to equivalent RGB of #D67014 */
+    margin: 0;
+  }
+  
+  .team-title {
+    font-family: 'Calibri', sans-serif;
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 62px;
+    color: rgb(18, 10, 56); /* Converted to equivalent RGB of #120A38 */
+    margin: 10px 0;
+  }
+  
+  .team-description {
+    font-family: 'Calibri', sans-serif;
+    font-size: 28px;
+    line-height: 35px;
+    color: rgb(18, 10, 56); /* Same color as the title */
+    margin: 0 auto;
+    max-width: 800px; /* Optional: To control the width of the paragraph */
+  }
+  .team-description {
+    font-family: 'Calibri', sans-serif;
+    font-size: 28px;
+    line-height: 35px;
+    color: rgb(18, 10, 56); /* Same color as the title */
+    margin: 0 auto;
+    max-width: 800px; /* Optional: To control the width of the paragraph */
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Default: 1 card per row for smaller screens */
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* For larger screens, show 4 cards per row */
+  @media (min-width: 1024px) { /* You can adjust the break point as needed */
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    }
+  }
+  /* General styles for card */
+.cardTeam {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px; /* Fixed width for larger screens */
+    text-align: center;
+    margin: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .cardTeam-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .cardTeam-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .cardTeam-role {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4f38c3; /* Purple */
+    margin-bottom: 10px;
+  }
+  
+  .cardTeam-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .cardTeam-skills {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  
+  .cardTeam-skill {
+    background: #f3f4f6; /* Light background */
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  /* Social icon styles */
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Light background */
+    padding: 6px;
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1); /* Slight scale-up effect on hover */
+  }
+  
+  /* Make the card responsive */
+  @media (max-width: 768px) {
+    .cardTeam {
+      width: 200px; /* Adjust width for medium screens */
+    }
+  
+    .cardTeam-name {
+      font-size: 18px;
+    }
+  
+    .cardTeam-role {
+      font-size: 14px;
+    }
+  
+    .cardTeam-description {
+      font-size: 12px;
+    }
+  
+    .social-links {
+      gap: 8px;
+    }
+  
+    .social-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+  /* Make the card very responsive for small screens */
+  @media (max-width: 480px) {
+    .cardTeam {
+      width: 150px; /* Adjust width for smaller screens */
+      padding: 15px;
+    }
+  
+    .cardTeam-image {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .cardTeam-name {
+      font-size: 16px;
+    }
+  
+    .cardTeam-role {
+      font-size: 12px;
+    }
+  
+    .cardTeam-description {
+      font-size: 10px;
+    }
+  
+    .social-links {
+      gap: 6px;
+    }
+  
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  /* App.css */
+
+/* Style for the history section */
+.history-section {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  /* Styling for the main title 'OUR HISTORY' */
+  .history-title {
+    font-family: 'Calibri', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(214, 113, 20); /* rgb(0.84, 0.44, 0.08) */
+    line-height: 26px;
+  }
+  
+  /* Styling for the subtitle 'The Story of Msarii' */
+  .history-subtitle {
+    font-family: 'Calibri', sans-serif;
+    font-size: 54px;
+    font-weight: bold;
+    color: rgb(18, 10, 56); /* rgb(0.07, 0.04, 0.22) */
+    line-height: 62px;
+    margin-top: 20px;
+  }
+  
+  /* Styling for the description text */
+  .history-description {
+    font-family: 'Calibri', sans-serif;
+    font-size: 24px;
+    line-height: 40px;
+    color: rgb(18, 10, 56); /* rgb(0.07, 0.04, 0.22) */
+    max-width: 1020px;
+    margin: 20px auto;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-section {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center; /* Centers items vertically */
+    align-items: center;    /* Centers items horizontally */
+    height: 100%;           /* Ensures it takes full height of parent */
+  }
+  
+  
+  .right-section {
+    width: 85%;
+    padding-left: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left-section {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+    }
+  
+    .right-section {
+      width: 100%;
+    }
+  }
+  
