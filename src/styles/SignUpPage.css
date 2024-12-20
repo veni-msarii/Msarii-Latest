@@ -1,0 +1,27 @@
+/* Optional Custom Styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 12px 24px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.right-column {
+    flex: 1;
+    /* background-image: url('https://via.placeholder.com/474x370'); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+}

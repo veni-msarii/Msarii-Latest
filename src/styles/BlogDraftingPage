@@ -1,0 +1,32 @@
+/* BlogDraftingPage.css */
+@media (max-width: 768px) {
+  .MuiBox-root {
+    padding: 10px;
+  }
+
+  .MuiButton-root {
+    font-size: 14px;
+  }
+
+  .MuiPaper-root {
+    width: 100%;
+  }
+
+  .MuiTypography-root {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MuiButton-root {
+    font-size: 12px;
+  }
+
+  .MuiTypography-root {
+    font-size: 24px;
+  }
+
+  .MuiPaper-root {
+    padding: 10px;
+  }
+}

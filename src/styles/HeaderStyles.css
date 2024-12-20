@@ -11,6 +11,18 @@
   text-decoration: none;
   color: Black;
 }
+.auth-options {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between elements */
+}
+
+.vertical-line {
+  width: 1px;
+  height: 20px;
+  background-color: #130939; /* Color of the line */
+}
+
 .active {
   color: goldenrod !important;
   font-weight: bold !important;

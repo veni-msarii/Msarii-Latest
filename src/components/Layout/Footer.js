@@ -6,6 +6,7 @@ import SocialIcon1 from "../../images/Social icon (1).png"
 import SocialIcon2 from "../../images/Social icon (2).png"
 import SocialIcon3 from "../../images/Social icon (3).png"
 import SocialIcon4 from "../../images/Social icon (4).png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -67,9 +68,11 @@ const Footer = () => {
     <Typography variant="body2" sx={{ mb: 1, cursor: "pointer" }}>
       eBooks
     </Typography>
-    <Typography variant="body2" sx={{ mb: 1, cursor: "pointer" }}>
-      Blogs
-    </Typography>
+    <Link to="/blogs" style={{ textDecoration: 'none' }}>
+  <Typography variant="body2" sx={{ mb: 1, cursor: 'pointer', color: 'white' }}>
+    Blogs
+  </Typography>
+</Link>
     <Typography variant="body2" sx={{ cursor: "pointer" }}>
       Community
     </Typography>

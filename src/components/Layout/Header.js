@@ -28,48 +28,55 @@ const Header = () => {
         component="div"
         sx={{ flexGrow: 1, my: 2 }}
       >
-        <img src={Logo} alt="logo" height={"70"} width="200" />
+        <img src={Logo} alt="logo" height={"70"} width="150" />
       </Typography>
       <Divider />
       <ul className="mobile-navigation">
-        <li>
-          <NavLink activeClassName="active" to={"/"}>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to={"/menu"}>Product</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/about"}>About</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/contact"}>Pricing</NavLink>
-        </li>
-        <li>
-                  <NavLink to={"/contact"}>Support</NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/contact"}>Store</NavLink>
-                </li>
-                 <li className="login-btn">
+  <li>
+    <NavLink activeClassName="active" to={"/"}>
+      Home
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to={"/menu"}>Product</NavLink>
+  </li>
+  <li>
+    <NavLink to={"/about"}>About</NavLink>
+  </li>
+  <li>
+    <NavLink to={"/contact"}>Pricing</NavLink>
+  </li>
+  <li>
+    <NavLink to={"/contact"}>Support</NavLink>
+  </li>
+  <li>
+    <NavLink to={"/contact"}>Store</NavLink>
+  </li>
+  <li className="auth-options">
+  <NavLink
+      to={"/signup"}
+      className="signup-button"
+      style={{
+        color: "#130939",
+        fontWeight: "bold",
+      }}
+    >
+      Sign Up
+    </NavLink>
+    <span className="vertical-line"></span>
     <NavLink
       to={"/login"}
       className="login-button"
       style={{
-        backgroundColor: "#130939", // Button background color
-        color: "white",              // Text color
-        padding: "10px 20px",        // Padding for the button
-        borderRadius: "5px",         // Rounded corners
-        textAlign: "center",         // Center text inside button
-        textDecoration: "none",      // Remove underline
-        display: "inline-block",     // Make sure it behaves like a block element
+        color: "#130939",
       }}
     >
       Login
     </NavLink>
+   
   </li>
-      </ul>
+</ul>
+
     </Box>
   );
   return (
@@ -95,49 +102,57 @@ const Header = () => {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              <img src={Logo} alt="logo" height={"70"} width="250" />
+              <img src={Logo} alt="logo" height={"55"} width="160" />
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              <ul className="navigation-menu">
-                <li>
-                  <NavLink activeClassName="active" to={"/"}>
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/menu"}>Product</NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/about"}>About</NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/contact"}>Pricing</NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/contact"}>Support</NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/contact"}>Store</NavLink>
-                </li>
-                <li className="login-btn">
+            <ul className="navigation-menu">
+  <li>
+    <NavLink activeClassName="active" to={"/"}>
+      Home
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to={"/menu"}>Product</NavLink>
+  </li>
+  <li>
+    <NavLink to={"/about"}>About</NavLink>
+  </li>
+  <li>
+    <NavLink to={"/contact"}>Pricing</NavLink>
+  </li>
+  <li>
+    <NavLink to={"/contact"}>Support</NavLink>
+  </li>
+  <li>
+    <NavLink to={"/contact"}>Store</NavLink>
+  </li>
+
+  {/* Login and Sign Up with vertical line */}
+  <li className="auth-options">
+  <NavLink
+      to={"/signup"}
+      className="signup-button"
+      style={{
+        color: "#130939", // Text color
+        fontWeight: "bold", // Bold for Sign Up
+      }}
+    >
+      Sign Up
+    </NavLink>
+    <span className="vertical-line"></span>
+    
     <NavLink
       to={"/login"}
       className="login-button"
       style={{
-        backgroundColor: "#130939", // Button background color
-        color: "white",              // Text color
-        padding: "10px 20px",        // Padding for the button
-        borderRadius: "5px",         // Rounded corners
-        textAlign: "center",         // Center text inside button
-        textDecoration: "none",      // Remove underline
-        display: "inline-block",     // Make sure it behaves like a block element
+        color: "#130939", // Text color
       }}
     >
       Login
     </NavLink>
   </li>
-                
-              </ul>
+</ul>
+
             </Box>
           </Toolbar>
         </AppBar>
